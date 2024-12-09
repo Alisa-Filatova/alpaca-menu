@@ -1,0 +1,33 @@
+@use 'color';
+
+$text-color-primary: color.$white;
+$text-color-accent: color.$red;
+
+$bg-primary: color.$black-0;
+$bg-secondary: color.$black-10;
+
+$focus-ring-bg: $bg-primary;
+$focus-ring-outline-color: color.$orange;
+
+$focus-ring-gap: 2px;
+$focus-ring-outline: 5px;
+
+$border-radius-base: 8px;
+
+$font-size-m: 18px;
+$font-size-s: 16px;
+
+$border-color-0: color.$black-0;
+
+$box-shadow: 0 6px 12px rgba(color.$black-0, 70%);
+
+$overlay-color: rgba(color.$black-0, 50%);
+
+$border-color-100: rgba(color.$white, 5%);
+
+$button-icon-size: 44px;
+
+$transition-base: 0.2s linear;
+
+$overlay-layer: 100;
+$sidebar-menu-layer: calc($overlay-layer + 1);

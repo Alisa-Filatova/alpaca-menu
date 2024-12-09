@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/vendors/normalize.css">
+    <link rel="stylesheet" href="styles/main.scss">
+
+    <title>Совкомбанк ТЗ / Алиса Филатова</title>
+  </head>
+  
+  <body class="page">
+    <header class="header page__header">
+      <img 
+        class="logo header__logo"
+        width="46"
+        height="46"
+        src="img/logo.svg" 
+        alt="" 
+        aria-hidden="true"
+      >
+      
+      <button
+        class="sidebar-menu-button header__menu-button"
+        id="sidebar-menu-btn"
+        aria-expanded="false"
+        aria-controls="main-menu-bar"
+        aria-haspopup="menu"
+        title="Раскрыть меню"
+        type="button"
+      >
+        <img 
+          class="sidebar-menu-button__icon"
+          width="22"
+          height="14"
+          src="img/burger.svg" 
+          alt="" 
+          aria-hidden="true"
+        >
+        <span
+          class="sidebar-menu-button__text"
+          aria-hidden="true"
+        >
+          Раскрыть меню
+        </span>
+      </button>
+
+      <!-- MENU -->
+      <nav
+        class="main-menu header__menu"
+        id="main-nav"
+        aria-label="Главное меню"
+      >
+        <ul
+          class="menu menu_menubar"
+          id="main-menu-bar"
+          role="menubar"
+          aria-orientation="horizontal"
+        >
+          <li
+            class="menu__item"
+            role="presentation"
+          >
+            <a
+              class="menu-button menu__button"
+              role="menuitem"
+              href="#"
+            >
+              <span class="menu-button__text">
+                Главная
+              </span>
+            </a>
+          </li>
+          <li
+            class="menu__item menu__item_has-submenu"
+            role="presentation"
+          >
+            <button
+              class="menu-button menu__button menu__button_main"
+              role="menuitem"
+              aria-expanded="false"
+              aria-controls="main-menu-submenu"
+              aria-haspopup="menu"
+              type="button"
+            >
+              <span class="menu-button__text">
+                Основное меню
+              </span>
+              <img 
+                class="menu-button__icon"
+                width="9"
+                height="6"
+                src="img/triangle.svg"
+                alt=""
+                aria-hidden="true"
+              >
+            </button>
+            <ul
+              class="menu menu_submenu menu_submenu_collapsed"
+              role="menu"
+              id="main-menu-submenu"
+              aria-orientation="vertical"
+            >
+              <li 
+                class="menu__item" 
+                role="presentation"
+              >
+                <button
+                  class="menu-button menu__button"
+                  role="menuitem"
+                  type="button"
+                >
+                  <span class="menu-button__text">
+                    Заказать вёрстку
+                  </span>
+                </button>
+              </li>
+              <li 
+                class="menu__item" 
+                role="presentation"
+              >
+                <button
+                  class="menu-button menu__button"
+                  role="menuitem"
+                  type="button"
+                >
+                  <span class="menu-button__text">
+                    Отправить макет на проверку
+                  </span>
+                </button>
+              </li>
+              <li
+                class="menu__item"
+                role="presentation"
+              >
+                <a
+                  class="menu-button menu__button"
+                  role="menuitem"
+                  href="#"
+                >
+                  <span class="menu-button__text">
+                    Хочу работать у вас
+                  </span>
+                </a>
+              </li>
+              <li
+                class="menu__item menu__item_has-submenu"
+                role="presentation"
+              >
+                <button
+                  class="menu-button menu__button"
+                  role="menuitem"
+                  aria-expanded="false"
+                  aria-controls="offer-submenu"
+                  aria-haspopup="menu"
+                  type="button"
+                >
+                  <span class="menu-button__text">
+                    Есть предложение по работе с клиентами
+                  </span>
+                  <img 
+                    class="menu-button__icon"
+                    width="9"
+                    height="6"
+                    src="img/triangle.svg"
+                    alt=""
+                    aria-hidden="true"
+                  >
+                </button>
+                <ul
+                  class="menu menu_submenu menu_submenu_popup menu_submenu_collapsed"
+                  id="offer-submenu"
+                  role="menu"
+                  aria-orientation="vertical"
+                >
+                  <li
+                    class="menu__item"
+                    role="presentation"
+                  >
+                    <button
+                      class="menu-button menu__button"
+                      role="menuitem"
+                      type="button"
+                    >
+                      <span class="menu-button__text">
+                        У меня есть оффер
+                      </span>
+                    </button>
+                  </li>
+                  <li
+                    role="presentation"
+                    class="menu__item"
+                  >
+                    <button
+                      class="menu-button menu__button"
+                      role="menuitem"
+                      type="button"
+                    >
+                      <span class="menu-button__text">
+                        Сделать партнером
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="menu__item"
+            role="presentation"
+          >
+            <a
+              class="menu-button menu__button"
+              role="menuitem"
+              href="#"
+            >
+              <span class="menu-button__text">
+                Наши сервисы
+              </span>
+            </a>
+          </li>
+          <li
+            class="menu__item"
+            role="presentation"
+          >
+            <a
+              class="menu-button menu__button"
+              role="menuitem"
+              href="#"
+            >
+              <span class="menu-button__text">
+                Контакты
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a
+        class="phone-link header__phone"
+        href="tel:+13212223333"
+        aria-label="Позвонить нам по телефону: +1(321)222-33-33"
+      >
+        <img 
+          class="phone-link__icon"
+          width="18"
+          height="18"
+          src="img/phone.svg"
+          alt=""
+          aria-hidden="true"
+        >
+        <span
+          class="phone-link__number"
+          aria-hidden="true"
+        >
+          +1 (321) 222 - 33 - 33
+        </span>
+      </a>
+    </header>
+
+    <main class="content page__content">
+      <div
+        class="overlay content__overlay"
+        id="overlay"
+      >
+      </div>
+    </main>
+
+    <script type="module" src="js/menu.js"></script>
+  </body>
+</html>

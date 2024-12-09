@@ -1,0 +1,23 @@
+{
+  "name": "sovkombank-test",
+  "version": "1.0.0",
+  "description": "sovkombank-test",
+  "author": "Alisa Filatova",
+  "license": "ISC",
+  "main": "vite.config.js",
+  "engines" : { 
+    "npm" : "~10.9.0",
+    "node" : "~22.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "sass-embedded": "^1.81.1",
+    "vite": "^6.0.2"
+  }
+}

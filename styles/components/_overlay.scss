@@ -1,0 +1,16 @@
+@use '../base/theme';
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: theme.$overlay-color;
+  z-index: theme.$overlay-layer;
+ 
+  &_visible {
+    display: block;
+  }
+}

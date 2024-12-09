@@ -1,0 +1,72 @@
+@use '../base/theme';
+
+@mixin listReset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin triangle($size, $color, $direction) {
+  display: block;
+  width: 0; 
+  height: 0; 
+  border-color: transparent;
+  border-style: solid;
+  border-width: $size;
+
+  @if $direction == up {
+    border-bottom-color: $color;
+  } @else if $direction == right {
+    border-left-color: $color;
+  } @else if $direction == down {
+    border-top-color: $color;
+  } @else if $direction == left {
+    border-right-color: $color;
+  } @else {
+    @error "Unknown direction #{$direction}.";
+  }
+}
+
+@mixin textTruncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin focusRing {
+  border-radius: theme.$border-radius-base;
+
+  &:focus-visible {
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 
+      0 0 0 theme.$focus-ring-gap theme.$focus-ring-bg, 
+      0 0 0 theme.$focus-ring-outline theme.$focus-ring-outline-color;
+  }
+}
+
+@mixin buttonReset {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:is(button) {
+    appearance: none;
+  }
+
+  &:is(a) {
+    text-decoration: none;
+  }
+}
+
+// for a11y purposes
+@mixin visuallyHidden {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}

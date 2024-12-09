@@ -1,0 +1,14 @@
+@use '../base/theme';
+@use '../utils/mixin';
+
+.sidebar-menu-button {
+  @include mixin.buttonReset;
+  width: theme.$button-icon-size;
+  height: theme.$button-icon-size;
+  border-radius: theme.$border-radius-base;
+  @include mixin.focusRing;
+
+  &__text {
+    @include mixin.visuallyHidden;
+  }
+}

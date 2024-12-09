@@ -1,0 +1,31 @@
+@use 'theme';
+@use 'screen-size';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: theme.$font-size-m;
+  line-height: 24px;
+  background-color: theme.$bg-secondary;
+  color: theme.$text-color-primary;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  min-width: screen-size.$xsmall;
+  min-height: 100vh;
+  overflow-x: hidden;
+}

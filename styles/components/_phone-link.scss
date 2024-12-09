@@ -1,0 +1,37 @@
+@use '../base/theme';
+@use '../base/screen-size';
+@use '../utils/mixin';
+
+.phone-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: theme.$button-icon-size;
+  height: theme.$button-icon-size;
+  color: theme.$text-color-primary;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all theme.$transition-base;
+  @include mixin.focusRing;
+
+  &__number {
+    font-size: theme.$font-size-m;
+    display: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: theme.$text-color-accent;
+    }
+  }
+}
+
+@media (min-width: screen-size.$small) {
+  .phone-link {
+    gap: 10px;
+
+    &__number {
+      display: block;
+    }
+  }
+}

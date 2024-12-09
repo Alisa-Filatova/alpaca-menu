@@ -1,0 +1,22 @@
+@use '../base/screen-size';
+
+.content {
+  width: 100%;
+  background-image: url('../img/alpaca-mobile.jpg');
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: screen-size.$small) {
+    background-image: url('../img/alpaca.jpg');
+    background-size: cover;
+  }
+
+  @media (min-width: screen-size.$large) {
+    background-image: url('../img/alpaca-2x.jpg');
+    background-size: cover;
+
+    &__overlay {
+      display: none;
+    }
+  }
+}
